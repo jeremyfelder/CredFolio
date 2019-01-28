@@ -1,0 +1,9 @@
+if web3 wallet enabled:
+    allow to onboard using wallet or CC
+    if CC chosen: goto noWallet
+    walletChosen:
+        start from cryptoEdMaterial
+noWallet:
+    allow payment through CCs
+    create burner wallet for their deposit
+    guide through wallet setup - MetaMask6
