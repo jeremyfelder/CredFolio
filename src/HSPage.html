@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Edfolio: An Attested Educational Profile</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body class="is-preload">
+
+<!-- Header -->
+<div id="header">
+
+    <div class="top">
+
+        <!-- Logo -->
+        <div id="logo">
+            <span class="image avatar64"><img src="images/JeremyProfile.jpg" alt=""/></span>
+            <h1 id="title"></h1>
+            <p id="short-bio"></p>
+        </div>
+
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#highschool" id="highschool-link"><span
+                        class="icon fa-graduation-cap">Student Directory</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- Intro -->
+    <section id="highschool" class="one">
+        <div class="container">
+
+            <!--<header>-->
+            <!--<h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />-->
+            <!--site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>-->
+            <!--<p>Ligula scelerisque justo sem accumsan diam quis<br />-->
+            <!--vitae natoque dictum sollicitudin elementum.</p>-->
+            <!--</header>-->
+
+            <header>
+                <h2>Student Directory</h2>
+                <button title="Add Student" onclick="document.getElementById('addStudentForm').style.display='block'" style="float:right">
+                    <span class="icon fa-plus"></span></button>
+            </header>
+            <br>
+
+            <div id="studentRow" class="row">
+
+            </div>
+
+            <div id="studentTemplate" style="display: none;">
+              <div class="col-sm-6 col-md-4 col-lg-3" style="text-align:center;">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                      <button class="btn btn-default studentNameBTN" type="button" data-id="0">
+                          <span>Student X</span>
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ADD STUDENT FORM -->
+            <div id="addStudentForm" style="display: none;">
+                <form class="modal-content animate" action="#" onsubmit="return App.addStudent();">
+                    <div class="imgcontainer2">
+                        <span onclick="document.getElementById('addStudentForm').style.display='none'" class="close2">&times;</span>
+                    </div>
+                    <div class="container2">
+                        <label><b>Student Name</b></label>
+                        <input id="addStudentName" type="text" placeholder="Enter Student Name" required>
+                        <label><b>Student Address</b></label>
+                        <input id="addStudentAddress" type="text" placeholder="Enter Student Address" required>
+                        <button onclick="document.getElementById('addStudentForm').style.display='none'">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- ADD CLASS FORM-->
+            <div id="addClassForm" style="display: none;">
+                <form class="modal-content animate" action="#" onsubmit="return App.addClass();">
+                    <div class="imgcontainer2">
+                        <span onclick="document.getElementById('addClassForm').style.display='none'" class="close2">&times;</span>
+                    </div>
+                    <div class="container2">
+                        <label><b>Class Name</b></label>
+                        <input id="addClassName" type="text" placeholder="Enter Class Name" required>
+                        <label><b>Class Teacher</b></label>
+                        <input id="addClassTeacher" type="text" placeholder="Enter Class Teacher Name" required>
+                        <label><b>Class Code</b></label>
+                        <input id="addClassCode" type="text" placeholder="Enter Class Code" required>
+                        <label><b>Semester</b></label>
+                        <input id="addClassSemester" type="text" placeholder="Enter Semester: ex F018" required>
+                        <label><b>Semester Grade</b></label>
+                        <input id="addClassGrade" type="text" placeholder="Enter Grade: Ex 84">
+
+                        <button onclick="document.getElementById('addClassForm').style.display='none'">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- EDIT CLASS FORM-->
+            <div id="editClassForm" style="display: none;">
+                <form class="modal-content animate" action="#" onsubmit="return App.editClass();">
+                    <div class="imgcontainer2">
+                        <span onclick="document.getElementById('editClassForm').style.display='none'" class="close2">&times;</span>
+                    </div>
+                    <div class="container2">
+                        <label><b>Class Name</b></label>
+                        <input id="editClassName" type="text" placeholder="Enter Class Name" readonly>
+                        <label><b>Class Teacher</b></label>
+                        <input id="editClassTeacher" type="text" placeholder="Enter Class Teacher Name" required>
+                        <label><b>Class Code</b></label>
+                        <input id="editClassCode" type="text" placeholder="Enter Class Code" readonly>
+                        <label><b>Semester</b></label>
+                        <input id="editClassSemester" type="text" placeholder="Enter Semester: ex F018" readonly>
+                        <label><b>Semester Grade</b></label>
+                        <input id="editClassGrade" type="text" placeholder="Enter Grade: Ex 84">
+
+                        <button onclick="document.getElementById('editClassForm').style.display='none'">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- CLICK ON STUDENT WINDOW POPUP-->
+            <div id="studentInfo" style="display: none;">
+                <div class="modal-content animate" style="width:100%;">
+
+                    <div class="imgcontainer2">
+                        <span onclick="document.getElementById('studentInfo').style.display='none'" class="close2" >&times;</span>
+                    </div>
+                    <button title="Add Class" onclick="document.getElementById('addClassForm').style.display='block'" style="float:left; margin-left: 25px;">
+                        <span class="icon fa-plus"></span>
+                    </button>
+                    <div id="student-Info-Name" >
+
+                    </div>
+
+
+                    <div class="container2">
+                        <table id="student-transcript">
+                            <thead>
+                                <tr>
+                                    <th><b>Class</b></th>
+                                    <th><b>Class Code</b></th>
+                                    <th><b>Semester</b></th>
+                                    <th><b>Teacher</b></th>
+                                    <th><b>Grade</b></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<div id="footer">
+
+    <!-- Copyright -->
+    <ul class="copyright">
+        <li>&copy; Untitled. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/web3.min.js"></script>
+<script src="assets/js/truffle-contract.js"></script>
+<script src="assets/js/highSchoolApp.js"></script>
+</body>
+</html>

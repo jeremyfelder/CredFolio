@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%;" xmlns:text-shadow="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Edfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body style="height:100%; background: url('images/chalkBoard.jpg');background-repeat:no-repeat;background-size: 100% 100%;">
+<header style="height: 100px; background-color: rgba(176, 176, 176, 0.85)">
+        <img src="images/EDSm.png" alt="EdFolio Logo" style="margin-left: 20px; margin-top: 20px;">
+</header>
+<div style="height:87%; background-color: rgba(22, 92, 233, 0.425);">
+    <div class="container" style="width: 100%; height: 180px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-push-2" style="margin-top: 10px;">
+                <h1 class="text-center" style="font-size: 65px;
+                text-shadow: 0 1px 0 #ccc,
+                               0 2px 0 #c9c9c9,
+                               0 3px 0 #bbb,
+                               0 4px 0 #b9b9b9,
+                               0 5px 0 #aaa,
+                               0 6px 1px rgba(0,0,0,.1),
+                               0 0 5px rgba(0,0,0,.1),
+                               0 1px 3px rgba(0,0,0,.3),
+                               0 3px 5px rgba(0,0,0,.2),
+                               0 5px 10px rgba(0,0,0,.25),
+                               0 10px 10px rgba(0,0,0,.2),
+                               0 20px 20px rgba(0,0,0,.15);">
+                    <font color="#ffffff">
+                        <strong>An Attested Educational Profile</strong>
+                    </font>
+                </h1><br>
+                <p class="text-center" style="font-size: 21px; font-family: 'Comic Sans MS'; color: #fff">
+                    <strong>
+                        EdFolio makes it easier for students to share their educational data with universities and companies.
+                        From grades to research to certifications, their accomplishments are all in one place, attested
+                        to by the institutions themselves.
+                    </strong>
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div style="width: 100%; height: 100%; margin-top: 110px;">
+            <div class="signUpStudent" style="float: left; width: 50%; text-align: center">
+                <h1><font color="#000"><strong>Are you a student?</strong></font></h1>
+                <h2>Sign up with your name:</h2><br>
+                <input class="form-control form-rounded" style="width: 60%; display: inline-block;" type="text" id="signUpVal" placeholder="Jane Doe" size="60" required><br><br>
+                <button class="btn btn-default btn-signupstudent" style="font-size: 18px; width: 125px;" type="submit">Sign Up</button>
+                <br><br>
+                <button class="btn btn-default btn-signupstudent" style="font-size: 18px; width: 125px;" type="submit">Log In</button>
+            </div>
+            <div class="HSUpStudent" style="float: right; width: 50%; text-align: center">
+                <h1><font color="#000"><strong>Are you a School Admin?</strong></font></h1>
+                <h2>Sign up with your School name:</h2><br>
+                <input class="form-control form-rounded" style="width: 60%; display: inline-block;" type="text" id="HSsignUpVal" placeholder="Marsha Stern Talmudic Academy" size="60" required><br><br>
+                <button class="btn btn-default btn-signUpHS" style="font-size: 18px; width: 125px;" type="submit">Sign Up</button>
+                <br><br>
+                <button class="btn btn-default btn-signupstudent" style="font-size: 18px; width: 125px;" type="submit">Log In</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: none">
+    <p>
+        How does it work?
+        When a student takes a test, the academic institution will upload their score to the student's profile.
+        The uploaded data is saved on the Ethereum Blockchain with a timestamp proving the data was uploaded
+        by the institution to the student's profile at a given time.
+
+
+        The student can only see the scores that have been uploaded to their profile but cannot change or add
+        to their educational data themselves. Only the student and the institution that uploaded the data can see
+        it, unless the student decideds to share it with another institution.
+    </p>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

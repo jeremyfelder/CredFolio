@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Edfolio: An Attested Educational Profile</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css"/>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar64"><img src="images/JeremyProfile.jpg" alt="" /></span>
+							<h1 id="title"></h1>
+							<p id="short-bio"></p>
+						</div>
+
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#highschool" id="highschool-link"><span class="icon fa-graduation-cap">High School</span></a></li>
+								<li><a href="#university" id="university-link"><span class="icon fa-university">University</span></a></li>
+								<li><a href="#certs" id="certs-link"><span class="icon fa-check-circle">Certifications</span></a></li>
+								<li><a href="#standardTests" id="standTests-link"><span class="icon fa-percent">Test Scores</span></a></li>
+							</ul>
+						</nav>
+				</div>
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="highschool" class="one">
+						<div class="container">
+
+
+							<header>
+								<h2>High School</h2>
+								<button onclick="document.getElementById('addSchoolForm').style.display='block'" style="float:right"><span class="icon fa-edit"></span></button>
+							</header><br>
+
+							<div id="content">
+								<div class="schoolInfo" id="highschoolInfo" align="left">
+									<table>
+										<tr>
+											<td><h3>School Name: </h3><h1 id="schools-name"></h1></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+
+							<div id="class-table" style="display: none;">
+								<table id="hs-transcript">
+									<tr>
+										<th><b>Class</b></th>
+										<th><b>Class Code</b></th>
+										<th><b>Semester</b></th>
+										<th><b>Teacher</b></th>
+										<th><b>Grade</b></th>
+									</tr>
+
+								</table>
+							</div>
+
+							<div id="addSchoolForm" class="changeSchoolForm" style="display: none;">
+								<form class="modal-content animate" action="#" onsubmit="return App.addHighSchool();">
+									<div class="imgcontainer2">
+										<span onclick="document.getElementById('addSchoolForm').style.display='none'" class="close2" >&times;</span>
+									</div>
+									<div class="container2">
+										<label><b>School Name</b></label>
+										<input id="addHighSchoolName" type="text" placeholder="Enter School Name" required>
+										<label><b>School Address</b></label>
+										<input id="addHighSchoolAddress" type="text" placeholder="Enter School Address" required>
+										<button onclick="document.getElementById('addSchoolForm').style.display='none'">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="university" class="two">
+						<div class="container">
+
+							<header>
+								<h2>University</h2>
+							</header>
+
+							<div id="content-college">
+								<div class="schoolInfo" id="collegeInfo" align="left">
+									<table>
+										<tr>
+											<td><h3>School Name: </h3><h1 id="college-schools-name"></h1></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+
+							<div id="college-class-table" style="display: block;">
+								<table id="college-transcript">
+									<thead>
+										<tr>
+											<th><b>Class</b></th>
+											<th><b>Class Code</b></th>
+											<th><b>Semester</b></th>
+											<th><b>Teacher</b></th>
+											<th><b>Grade</b></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><b>Chemistry for Engineers</b></td>
+											<td><b>CHEM135</b></td>
+											<td><b>F014</b></td>
+											<td><b>Mr. Yao</b></td>
+											<td><b>87</b></td>
+										</tr>
+										<tr>
+											<td><b>Programming for Electrical Engineers</b></td>
+											<td><b>ENEE148A</b></td>
+											<td><b>F014</b></td>
+											<td><b>Dr. Lawson</b></td>
+											<td><b>99</b></td>
+										</tr>
+										<tr>
+											<td><b>Calculus II</b></td>
+											<td><b>MATH141</b></td>
+											<td><b>F014</b></td>
+											<td><b>Mrs. Gage</b></td>
+											<td><b>92</b></td>
+										</tr>
+										<tr>
+											<td><b>Intro to Engineering</b></td>
+											<td><b>ENES100</b></td>
+											<td><b>F014</b></td>
+											<td><b>Dr. Valquez</b></td>
+											<td><b>98</b></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</section>
+				<!-- Certifications -->
+					<section id="certs" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Certifications</h2>
+							</header>
+							<div class="flip-card">
+							  <div class="flip-card-inner">
+								<div class="flip-card-front">
+								  <img src="images/ConsenSysAcademy.png" style="margin-top:25px;margin-bottom:15px; width:80%;height:70%;">
+								</div>
+								<div class="flip-card-back">
+								  <span class="cert-title">ConsenSys Academy</span><br>
+								  <span class="cert-name">Solidity Developer</span><br>
+								  <span class="cert-dates" style="width:50%; float: left;">Issued: 10/2/18</span>
+								  <span class="cert-dates" style="width:50%; float: left;">Expires: 10/1/23</span>
+								</div>
+							  </div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Standardized Tests -->
+					<section id="standardTests" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Standardized Test Scores</h2>
+							</header>
+
+							<div class="flip-card" style="height: 275px;">
+							  <div class="flip-card-inner">
+								<div class="flip-card-front">
+								  <img src="images/College_Board_logo.png" style="margin-top:95px;margin-bottom:15px; width:80%;height:25%;">
+								</div>
+								<div class="flip-card-back">
+								  <span class="cert-title">College Board</span><br>
+								  <span class="cert-name">Scholastic Aptitude <br> Test (SAT)</span><br>
+								  <span class="cert-dates">Date Taken: 10/2/18</span><br>
+								  <span class="cert-title">Grade Breakdown</span>
+								  <p style="line-height: 1;" class="cert-dates">EBRW: 650<br>Math: 720<br>Composite Score: 1370</p>
+								</div>
+							  </div>
+							</div>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		    <script src="assets/js/bootstrap.min.js"></script>
+			<script src="assets/js/web3.min.js"></script>
+			<script src="assets/js/truffle-contract.js"></script>
+			<script src="assets/js/app.js"></script>
+	</body>
+</html>
