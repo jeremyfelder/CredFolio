@@ -11,10 +11,6 @@ contract CompanyAccessControls {
         CFO
     }
     
-    event NewCEO(address oldCEO, address newCEO);
-    event NewCFO(address oldCFO, address newCFO);
-    event NewCTO(address oldCTO, address newCTO);
-    
     constructor() public {
         cSuiteAddresses[uint8(cSuite.CEO)] = msg.sender;
         cSuiteAddresses[uint8(cSuite.CTO)] = msg.sender;
