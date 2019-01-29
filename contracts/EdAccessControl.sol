@@ -1,5 +1,6 @@
 pragma solidity ^0.4.18;
 
+//This has been deprecated see CompanyAccessControls.sol
 contract EdAccessControl {
 
     address private ceoAddress;
