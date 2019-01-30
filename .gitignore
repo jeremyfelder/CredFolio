@@ -1,0 +1,5 @@
+#Build directory from truffle contracts
+/build
+
+#dist directory from bundling js files
+/dist
