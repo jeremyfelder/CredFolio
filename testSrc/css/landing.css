@@ -1,8 +1,28 @@
-h1 {
-    color: purple;
+h1,h2 {
+    color: #0f0c96;
 }
 
-#brand-name{
-    color: black;
-    font-weight: 600;
+.bd-navbar {
+    min-height: 4rem;
+    background-color: #040272;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    position: sticky;
+}
+
+.flex-row-md {
+    text-align: center;
+}
+
+.jumbotron {
+    text-align: center
+}
+
+.opening-title {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.opening-by-line {
+    font-size: 2.5rem;
+    line-height: 1;
 }
