@@ -1,7 +1,7 @@
 pragma solidity ^0.4.24;
 
 contract Certifications {
-	//more modular wya to add cert types in the future???? 
+	//more modular way to add cert types in the future???? 
 	
 	struct Certs {
 		uint16 type; // Score, Work experience, Degree, Certification
