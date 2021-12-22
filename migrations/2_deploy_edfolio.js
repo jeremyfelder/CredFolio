@@ -1,5 +1,5 @@
-var Edfolio = artifacts.require("Edfolio");
+var EdFolio = artifacts.require("./EdCore.sol");
 
 module.exports = function(deployer) {
-	deployer.deploy(Edfolio);
+	deployer.deploy(EdFolio);
 };
